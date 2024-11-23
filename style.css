@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/Fondo.png);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    padding: 0;
+    margin: 0;
+}
+
+.titulo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.titulo h1 {
+    font-family: "Ultra", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 70px;
+    color: #fae8c8;
+    text-shadow: 0px 1px 0px #e13931,  /* Sombra suave a la derecha e inferior */
+    -1px -1px 0px #e13931, /* Sombra suave a la izquierda y superior */
+    1px -1px 0px #e13931,  /* Sombra suave a la derecha y superior */
+    -1px 1px 0px #e13931,  /* Sombra suave a la izquierda e inferior */
+    8px 0px 0px #e13931,   /* Sombra mÃ¡s pronunciada */
+    6px 0px 0px #e13931;   /* Sombra mÃ¡s alejada */
+    margin-top: -30px; 
+}
+
+.fondo_calculadora {
+    margin-top: -50px; 
+    border: 2px burlywood;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuerpo_calculadora {
+    background-color: #f3938e;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: 
+        'areaPantalla areaPantalla'
+        'areaNumeros areaNumeros'
+        'areaInf areaInf'
+        'areaOperaciones areaOperaciones';
+    gap: 5px;
+    border: 15px solid #f3938e;
+    border-radius: 10px;
+}
+
+#pantalla {
+    grid-area: areaPantalla;
+    background-color: #79bcb2;
+    box-shadow: rgb(68, 78, 87) 3px 3px 6px 0px inset, rgba(219, 214, 214, 0.5) -3px -3px 6px 1px inset;
+    color: black;
+    padding: 15px;
+    border-radius: 15px;
+    font-family: "Josefin Sans", sans-serif;
+    letter-spacing: 4px;
+    text-align: center;
+    height: 80px;
+    font-size: 20pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2.5px solid #95630c;
+}
+
+#numeros {
+    grid-area: areaNumeros;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    font-family: "Josefin Sans", sans-serif;
+    height: 200px;
+}
+
+#operaciones {
+    grid-area: areaOperaciones;     
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#operaciones div {
+    background-color: #ddb508;
+    cursor: pointer;
+    text-align: center;
+    height: 30px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5pt;
+    border: 2.5px solid #95630c;
+}
+
+#operaciones div:hover {
+    background-color: #a78902;
+}
+
+#numeros button {
+    background-color: #79bcb2;
+    cursor: pointer;
+    border-radius: 10%;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    font-size: 15pt;
+    border-radius: 5pt;
+    border: 2.5px solid #95630c;
+}
+
+#numeros button:hover {
+    background-color: cadetblue;
+}
+
+#btn_inf {
+    grid-area: areaInf;     
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+}
+
+#btn_inf button {
+    background-color: #79bcb2;
+    cursor: pointer;
+    border-radius: 10%;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    font-size: 15pt;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5pt;
+    border: 2.5px solid #95630c;
+}
+
+#btn_inf button:hover {
+    background-color: cadetblue;
+}
+
